@@ -51,6 +51,10 @@ a {
     white-space: nowrap;
 }
 
+.btn:hover {
+    opacity: 0.85;
+}
+
 h1,
 h2,
 h3 {
@@ -799,6 +803,7 @@ h2 {
 }
 
 .staff__btn {
+    justify-self: center;
     margin-top: 30px;
     min-width: 193px;
     height: 56px;
@@ -812,4 +817,142 @@ h2 {
 .staff__btn:hover {
     background: var(--secondary-color);
     color: #fff;
+}
+
+/* Price */
+.price {
+    padding: 85px 0;
+    background: #fff6ed;
+}
+
+.price__inner {
+    display: grid;
+    justify-items: center;
+}
+
+.price__desc {
+    margin-bottom: 38px;
+    width: 709px;
+    text-align: center;
+}
+
+.tab {
+    display: grid;
+    justify-items: center;
+}
+
+.tab__switch {
+    position: relative;
+    margin-bottom: 56px;
+    height: 56px;
+    border-radius: 31px;
+    outline: 1px solid var(--secondary-color);
+    outline-offset: -1px;
+}
+
+.tab__option {
+    height: 56px;
+    min-width: 131px;
+    color: var(--secondary-color);
+}
+
+.tab__option--active {
+    color: #fff;
+    background: var(--secondary-color);
+}
+
+.tab__option-bubble {
+    position: absolute;
+    top: -6px;
+    right: -96px;
+}
+
+.tab__option-bubble img {
+    position: absolute;
+}
+
+.tab__option-bubble :first-child {
+    left: -27px;
+    bottom: -17px;
+}
+
+.tab__option-bubble :nth-child(2) {
+    left: -16px;
+    top: -6px;
+}
+
+.tab__option-bubble__value {
+    display: inline-block;
+    rotate: -5deg;
+    color: #5860a6;
+    text-align: center;
+    font-family: "Pattaya";
+    font-size: 1.2rem;
+}
+
+.tab__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(302px, auto));
+    column-gap: 44px;
+}
+
+.tab__item {
+    padding: 30px 28px 42px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.tab__item-label {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.tab__item-name {
+    margin-top: 8px;
+    color: #3f4065;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.tab__item-value {
+    margin-top: 24px;
+    display: block;
+    color: var(--primary-color);
+    font-family: "Sora";
+    font-size: 3.3rem;
+    font-weight: 700;
+    line-height: 1.03;
+}
+
+.tab__item-cta {
+    margin-top: 22px;
+    width: 100%;
+    min-height: 44px;
+    border-radius: 39px;
+    border: 1px solid rgba(255, 91, 46, 0.6);
+    color: var(--secondary-color);
+}
+
+.tab__item-cta--active {
+    color: #fff;
+    background: var(--secondary-color);
+}
+
+.tab__item__desc-list {
+    margin-top: 24px;
+}
+
+.tab__item__desc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tab__item__desc-item + .tab__item__desc-item {
+    margin-top: 18px;
+}
+
+.tab__item__desc-item span {
+    color: #656689;
+    font-size: 1.4rem;
 }
