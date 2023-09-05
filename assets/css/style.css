@@ -32,8 +32,7 @@ select {
 .container {
     width: 1170px;
     max-width: calc(100% - 48px);
-    margin-right: auto;
-    margin-left: auto;
+    margin: 0 auto;
 }
 
 a {
@@ -683,7 +682,7 @@ h2 {
 
 .service__item-link {
     margin-top: 24px;
-    display: flex;
+    display: inline-flex;
     gap: 6px;
 }
 
@@ -736,13 +735,14 @@ h2 {
 
 .staff__list {
     margin-top: 59px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 35px;
 }
 
 .staff__item {
+    display: grid;
+    justify-items: center;
     padding: 20px 18px;
     flex-grow: 1;
     flex-shrink: 0;
@@ -772,14 +772,12 @@ h2 {
 .staff__item-role {
     margin-top: 29px;
     color: #656689;
-    text-align: center;
     font-size: 1.4rem;
 }
 
 .staff__item-name {
     margin-top: 14px;
     color: #000958;
-    text-align: center;
     font-size: 2.2rem;
     font-weight: 600;
 }
@@ -963,16 +961,13 @@ h2 {
 }
 
 .review__inner {
-    display: grid;
-    justify-items: center;
-    gap: 56px 0;
+    display: flex;
+    align-items: center;
+    gap: 56px;
 }
 
 .review__content {
-    justify-self: stretch;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
 }
 
 .navigation__arrow-wrap {
@@ -991,10 +986,17 @@ h2 {
     border-color: var(--secondary-color);
 }
 
-.review__item {
+.review__list {
+    overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+}
+
+.review__item {
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
     gap: 115px;
 }
 
@@ -1026,6 +1028,9 @@ h2 {
 }
 
 .review__item-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     margin-top: 34px;
     color: #282828;
     font-family: "Sora", sans-serif;
@@ -1034,12 +1039,8 @@ h2 {
 }
 
 .review__item-author::before {
-    position: relative;
-    left: 0;
-    bottom: 5px;
     content: "";
     display: inline-block;
-    margin-right: 8px;
     width: 20px;
     height: 2px;
     background: #000;
@@ -1055,6 +1056,8 @@ h2 {
 }
 
 .review__navigation {
+    margin-top: 56px;
+    justify-self: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1198,7 +1201,6 @@ h2 {
     height: 46px;
     border-radius: 23px;
     border: 1px solid rgba(255, 91, 46, 0.25);
-    opacity: 0.6;
     background: #fff;
     overflow: hidden;
 }
